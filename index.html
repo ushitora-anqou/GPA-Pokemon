@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>GPAポケモン</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="pokemon.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>GPAポケモン</h1>
+      <h2>なんこれ？</h2>
+      <p>GPAポケモンを簡単にツイートするやつ。ポロリもあるよ！</p>
+      <p>注：京大しか対応していません。ごめんね。</p>
+    </header>
+
+    <div>
+      <h2>使い方</h2>
+      <p>KULASISの成績の表をコピペして下のフォームに貼って「確認」ボタンを押す。</p>
+      <p>スマホなどでテキストエリアが広がってしまって確認ボタンが押せない場合は、画面を回転させたりするといい感じに押せたりするみたいです。仕様です。</p>
+    </div>
+
+    <div>
+      <form id="main_form" action="index.html">
+        <textarea rows=10 id="src"></textarea>
+        <input type="button" value="確認" onclick="execute()">
+      </form>
+    </div>
+
+    <div id="result">
+    </div>
+
+    <footer>
+      <hr />
+      作った人は艮鮟鱇（@ushitora_anqou）です。自発ください。
+    </footer>
+  </body>
+</html>
