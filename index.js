@@ -16,9 +16,10 @@ function gp(score) {
 }
 
 function execute() {
-  let [sum, n] =
-  document.forms.main_form.elements['src']
-    .value.split('\n')
+  let src = document.getElementById("src")
+  if (src == null) return
+  let tmp =   
+    src.value.split('\n')
     .map(function(elm, idx, ary) {
       return elm.split(/\s+/);
     })
@@ -34,6 +35,8 @@ function execute() {
       return [ac[0] + elm[0] * gp(elm[1]), ac[1] + elm[0]];
     }, [0, 0]);
 
+  let sum = tmp[0]
+  let n = tmp[1]
   let result = document.getElementById('result');
   result.innerHTML = '<h2>そのデータ、なんかおかしくない？</h2>';
 
