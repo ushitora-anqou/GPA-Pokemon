@@ -52,7 +52,7 @@ function execute() {
   let tweet_url = build_uri('https://twitter.com/intent/tweet', {
     'text': 'GPAは' + gpa_str + 'です。GPAポケモンは' + pokemon_name + 'です。',
     'url': 'https://anqou.net/gpa_pokemon/',
-    'hashtags': 'GPA,GPAポケモン'
+    'hashtags': 'GPA,GPAポケモン,GPAPokemon'
   });
 
   result.innerHTML = 
