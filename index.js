@@ -56,7 +56,7 @@ function execute() {
     '<h2>結果</h2>' +
     '<p>あなたのGPAは<span class="result-GPA">' + gpa_str + '</span>です。あなたのGPAポケモンは' +
     '<a href=\"' + pokemon_url + '\"><span class="result-Pokemon-text">' + pokemon_name + '</span></a>' +
-    'です。<a href=\"' + tweet_url + '\'">ツイート</a>してイキリトになろう！';
+    'です。<a href=\"' + tweet_url + '">ツイート</a>してイキリトになろう！';
 }
 let confirmBtn = document.getElementById("confirm-btn")
 if (confirmBtn != null) {
