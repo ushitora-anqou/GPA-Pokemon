@@ -45,12 +45,9 @@ function execute() {
   let pokemon_name = POKEMON_NAMES[gpa100];
   if (!pokemon_name) return;
   let gpa_str = (gpa100 / 100).toFixed(2);
-  let pokemon_url = build_uri('https://www.google.co.jp/search', {
-    'tbm': 'isch',
-    'q': 'ポケモン ' + pokemon_name
-  });
+  let pokemon_url = 'https://zukan.pokemon.co.jp/detail/' + gpa100.toString().padStart(3, '0');
   let tweet_url = build_uri('https://twitter.com/intent/tweet', {
-    'text': 'GPAは' + gpa_str + 'です。GPAポケモンは' + pokemon_name + 'です。',
+    'text': 'GPAは' + gpa_str + 'です。GPAポケモンは' + pokemon_name + '（' + pokemon_url + '）です。',
     'url': 'https://anqou.net/gpa_pokemon/',
     'hashtags': 'GPA,GPAポケモン,GPAPokemon'
   });
